@@ -1,0 +1,263 @@
+.gamingSection {
+    padding: 5rem 1.5rem;
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  .sectionHeaderH2{
+    font-family: 'Gumela';
+  }
+  .sectionHeaderP{
+    font-family: 'Gumela';
+  }
+  .gamingSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      linear-gradient(rgba(15, 15, 26, 0.9), rgba(15, 15, 26, 0.9)),
+      url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+  
+  .sectionHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .sectionHeader h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.75rem;
+    background: linear-gradient(90deg, #ff4d4d, #f9cb28);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+  
+  .sectionHeader p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: #a1a1a1;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .gamesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    padding: 0 1rem;
+  }
+  
+  .gameCard {
+    background: rgba(26, 26, 46, 0.7);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: translateY(0);
+  }
+  
+  .gameCard:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .gameImageContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+  }
+  
+  .gameImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .gameCard:hover .gameImage {
+    transform: scale(1.1);
+  }
+  
+  .gameOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent 70%);
+  }
+  
+  .downloadBadge {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    backdrop-filter: blur(4px);
+  }
+  
+  .ratingBadge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 215, 0, 0.9);
+    color: #000;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+  
+  .gameInfo {
+    padding: 1.5rem;
+  }
+  
+  .gameTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .gameDescription {
+    color: #b8b8b8;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 4.5em;
+  }
+  
+  .statsContainer {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    flex-wrap: wrap;
+  }
+  
+  .statPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ddd;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  
+  .statIcon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+  
+  .installButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.9rem;
+    background: linear-gradient(90deg, #6e45e2, #88d3ce);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .installButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(110, 69, 226, 0.5);
+    background: linear-gradient(90deg, #88d3ce, #6e45e2);
+    color: white;
+  }
+  
+  .buttonIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .gamesGrid {
+      gap: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .gamingSection {
+      padding: 3rem 1rem;
+    }
+    
+    .gamesGrid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .gamingSection {
+      padding: 2.5rem 1rem;
+    }
+    
+    .sectionHeader h2 {
+      font-size: 1.8rem;
+    }
+    
+    .gameCard {
+      border-radius: 12px;
+    }
+    
+    .gameInfo {
+      padding: 1.2rem;
+    }
+    
+    .installButton {
+      padding: 0.8rem;
+      font-size: 0.85rem;
+    }
+  }
