@@ -5,6 +5,7 @@ import styles from './Games.module.css';
 const GamingSection = () => {
   // Top 8 most popular/installed games in USA
   const topGamesUSA = [
+    // Original 8 items (unchanged)
     {
       id: 1,
       title: "Call of Duty: Warzone",
@@ -25,7 +26,7 @@ const GamingSection = () => {
       id: 3,
       title: "Roblox",
       description: "Massive multiplayer platform with user-generated games. Daily active users: 66M+.",
-      imageUrl: "/Roblox.jpg",
+      imageUrl: "/roblox.jpg",
       downloads: "1B+",
       rating: "4.5",
     },
@@ -69,8 +70,89 @@ const GamingSection = () => {
       downloads: "1B+",
       rating: "4.3",
     },
-  ];
 
+    // New additions (starting from id: 9)
+    {
+      id: 9,
+      title: "Valorant",
+      description: "Tactical 5v5 character-based shooter from Riot Games. 30M+ monthly players.",
+      imageUrl: "/valorant.jpg",
+      downloads: "50M+",
+      rating: "4.5",
+    },
+    {
+      id: 10,
+      title: "Elden Ring",
+      description: "Acclaimed open-world action RPG with challenging combat. 25M+ copies sold.",
+      imageUrl: "/eldenring.jpg",
+      downloads: "25M+",
+      rating: "4.8",
+    },
+    {
+      id: 11,
+      title: "The Legend of Zelda: Tears of the Kingdom",
+      description: "Nintendo's epic open-world adventure with groundbreaking physics. Sold 20M+ copies.",
+      imageUrl: "/zelda.jpg",
+      downloads: "20M+",
+      rating: "4.9",
+    },
+    {
+      id: 12,
+      title: "Baldur's Gate 3",
+      description: "Critically-acclaimed D&D RPG with deep storytelling. 10M+ copies sold.",
+      imageUrl: "/baldursgate.jpg",
+      downloads: "10M+",
+      rating: "4.9",
+    },
+    {
+      id: 13,
+      title: "Counter-Strike 2",
+      description: "The definitive tactical FPS experience. 35M+ monthly players.",
+      imageUrl: "/cs2.jpg",
+      downloads: "500M+",
+      rating: "4.7",
+    },
+    {
+      id: 14,
+      title: "Hogwarts Legacy",
+      description: "Open-world Harry Potter universe RPG. Sold 22M+ copies.",
+      imageUrl: "/hogwarts.jpg",
+      downloads: "22M+",
+      rating: "4.7",
+    },
+    {
+      id: 15,
+      title: "Rocket League",
+      description: "Soccer with rocket-powered cars. 90M+ registered players.",
+      imageUrl: "/rocketleague.jpg",
+      downloads: "100M+",
+      rating: "4.6",
+    },
+    {
+      id: 16,
+      title: "Among Us",
+      description: "Social deduction phenomenon with 500M+ downloads.",
+      imageUrl: "/amongus.jpg",
+      downloads: "500M+",
+      rating: "4.1",
+    },
+    {
+        id: 17,
+        title: "Monopoly Go!",
+        description: "Mobile adaptation of the classic board game with social features. 100M+ downloads in 6 months.",
+        imageUrl: "/monopolygo.jpg",
+        downloads: "150M+",
+        rating: "4.3",
+      },
+      {
+        id: 18,
+        title: "Granny",
+        description: "Horror survival game where you escape from a creepy house while avoiding Granny. 500M+ downloads worldwide.",
+        imageUrl: "/granny.jpg",
+        downloads: "500M+",
+        rating: "4.2"
+      }
+];
   return (
     <section className={styles.gamingSection} id="discover">
       <div className={styles.sectionHeader}>
