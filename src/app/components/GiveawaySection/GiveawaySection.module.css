@@ -1,0 +1,222 @@
+.giveawaySection {
+    padding: 4rem 1.5rem;
+
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .giveawaySection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: 
+      radial-gradient(circle at 20% 30%, rgba(110, 69, 226, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.15) 0%, transparent 40%); */
+    pointer-events: none;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    text-align: center;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    text-align: center;
+    color: #d8d8d8;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .featureItem {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .featureItem:hover {
+    transform: translateY(-5px);
+  }
+  
+  .featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .featureItem h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+  }
+  
+  .featureItem p {
+    font-size: 0.9rem;
+    color: #b8b8b8;
+    line-height: 1.5;
+  }
+  
+  .enterButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #6e45e2, #88d3ce);
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin: 0 auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+  }
+  
+  .enterButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(110, 69, 226, 0.5);
+    background: linear-gradient(90deg, #88d3ce, #6e45e2);
+  }
+  
+  .buttonIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttonIcon svg {
+    transition: transform 0.3s ease;
+  }
+  
+  .enterButton:hover .buttonIcon svg {
+    transform: translateX(3px);
+  }
+  
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .countdownItem {
+    text-align: center;
+    min-width: 70px;
+  }
+  
+  .countdownNumber {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 0.3rem;
+  }
+  
+  .countdownLabel {
+    font-size: 0.8rem;
+    color: #b8b8b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .prizeImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease;
+  }
+  
+  .prizeImage:hover .image {
+    transform: scale(1.03);
+  }
+  
+  /* Responsive adjustments */
+  @media (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .content {
+      flex: 1;
+      padding-right: 3rem;
+    }
+    
+    .prizeImage {
+      flex: 1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .features {
+      grid-template-columns: 1fr;
+    }
+    
+    .countdown {
+      gap: 1rem;
+    }
+    
+    .countdownNumber {
+      font-size: 1.5rem;
+    }
+    
+    .countdownItem {
+      min-width: 60px;
+    }
+  }
