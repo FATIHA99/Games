@@ -26,7 +26,7 @@ const GamingSection = () => {
       id: 3,
       title: "Roblox",
       description: "Massive multiplayer platform with user-generated games. Daily active users: 66M+.",
-      imageUrl: "/Rgoblox.jpg",
+      imageUrl: "/Roblox.jpg",
       downloads: "1B+",
       rating: "4.5",
     },
