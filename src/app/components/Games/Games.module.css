@@ -37,7 +37,8 @@
   .sectionHeader h2 {
     font-size: clamp(2rem, 5vw, 3rem);
     margin-bottom: 0.75rem;
-    background: linear-gradient(90deg, #ef88f7, #6bd9ec);
+    /* background: linear-gradient(90deg, #ef88f7, #6bd9ec); */
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

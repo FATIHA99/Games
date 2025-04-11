@@ -1,3 +1,5 @@
+/* Hero.module.css */
+
 .container {
     height: 100vh; /* Full viewport height */
     background-size: cover; /* Cover the entire page */
@@ -12,7 +14,6 @@
     position: relative; /* Required for pseudo-element positioning */
 }
 
-
 .container::before {
     content: '';
     position: absolute;
@@ -21,8 +22,8 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.356);
-    /* backdrop-filter: blur(5px);  */
-    z-index: 1; 
+    /* backdrop-filter: blur(5px); */
+    z-index: 1;
 }
 
 /* Ensure content is above the overlay */
@@ -41,24 +42,32 @@
 /* Change background for desktop */
 @media (min-width: 768px) {
     .container {
-        background-image: url('/background77.jpg'); /* Desktop background image */
+        background-image: url('/background777.jpg'); /* Desktop background image */
     }
 }
 
+/* Title Styles with Animation */
 .title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
     color: #ffffff;
     padding: 15px;
-    /* background: linear-gradient(to right, #FFFFFF, #bc8ac0); */
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.2s forwards;
 }
 
+/* Description Styles with Animation */
 .description {
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    opacity: 0; /* Start invisible for animation */
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out 0.4s forwards;
 }
 
+/* Button Styles */
 .btn {
     padding: 1rem 2rem;
     font-size: 1.2rem;
@@ -73,12 +82,11 @@
 .btn:hover {
     background-color: #005bb5; /* Button hover color */
 }
+.Herospan{
+    color:  #ff9a9e !important;
+}
 
-
-
-
-
-
+/* Custom Button with Animation */
 .customBtn {
     width: 130px;
     height: 40px;
@@ -92,28 +100,20 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
-     7px 7px 20px 0px rgba(0,0,0,.1),
-     4px 4px 5px 0px rgba(0,0,0,.1);
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                7px 7px 20px 0px rgba(0,0,0,.1),
+                4px 4px 5px 0px rgba(0,0,0,.1);
     outline: none;
-   
     border: none;
     transition: all 0.3s ease;
     overflow: hidden;
     z-index: 10000;
     font-family: 'Gumela';
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.8s forwards;
+}
 
-  }
-  
-  
-  
-  /* 9 */
-  .customBtn {
-    border: none;
-    transition: all 0.3s ease;
-    overflow: hidden;
-  }
-  .customBtn:after {
+.customBtn:after {
     position: absolute;
     content: " ";
     z-index: -1;
@@ -121,24 +121,72 @@
     left: 0;
     width: 100%;
     height: 100%;
-     background-color: #1fd1f9;
-  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    background-color: #1fd1f9;
+    background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
     transition: all 0.3s ease;
-  }
-  .customBtn:hover {
+}
+
+.customBtn:hover {
     background: transparent;
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
     color: #fff;
-  }
-  .customBtn:hover:after {
+}
+
+.customBtn:hover:after {
     -webkit-transform: scale(2) rotate(180deg);
     transform: scale(2) rotate(180deg);
-    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
-                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
-      inset -4px -4px 6px 0 rgba(255,255,255,.5),
-      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
-  }
-  
+    box-shadow: 4px 4px 6px 0 rgba(255,255,255,.5),
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),
+                inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Optional: Add pulse animation to title after it appears */
+@media (prefers-reduced-motion: no-preference) {
+    .title {
+        animation: fadeInUp 1s ease-out 0.2s forwards, 
+                  pulse 2s ease-in-out 1.2s infinite;
+    }
+}
+
+/* Optional: Glow effect on hover for title */
+.title:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.3s ease;
+}
