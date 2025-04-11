@@ -31,7 +31,7 @@ const GiveawaySection = () => {
   }, []);
 
   return (
-    <section className={styles.giveawaySection}>
+    <section className={styles.giveawaySection} id="giveaway">
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>WIN A $500 GAMING GIVEAWAY!</h2>

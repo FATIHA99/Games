@@ -1,7 +1,8 @@
 .giveawaySection {
     padding: 4rem 1.5rem;
 
-    background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%);
+    /* background: radial-gradient(circle at center, #1a1a2e 0%, #0f0f1a 100%); */
+    background: #0f0f1a;
     color: #ffffff;
     position: relative;
     overflow: hidden;

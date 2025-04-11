@@ -178,15 +178,15 @@
 }
 
 /* Optional: Add pulse animation to title after it appears */
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
     .title {
         animation: fadeInUp 1s ease-out 0.2s forwards, 
                   pulse 2s ease-in-out 1.2s infinite;
     }
-}
+} */
 
 /* Optional: Glow effect on hover for title */
-.title:hover {
+/* .title:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     transition: text-shadow 0.3s ease;
-}
+} */

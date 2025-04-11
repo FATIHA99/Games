@@ -72,7 +72,7 @@ const GamingSection = () => {
   ];
 
   return (
-    <section className={styles.gamingSection}>
+    <section className={styles.gamingSection} id="discover">
       <div className={styles.sectionHeader}>
         <h2 className={styles.sectionHeaderH2}>USA's Most Popular Games</h2>
         <p className={styles.sectionHeaderP}>Top installed and played games in the United States</p>
