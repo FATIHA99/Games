@@ -7,12 +7,12 @@ const GamingSection = () => {
   const topGamesUSA = [
     // Original 8 items (unchanged)
     {
-      id: 1,
-      title: "Call of Duty: Warzone",
-      description: "Free-to-play battle royale with intense combat and massive maps. Over 100M+ downloads.",
-      imageUrl: "/warzone.jpg",
-      downloads: "100M+",
-      rating: "4.8",
+      "id": 1,
+      "title": "Baseball 9",
+      "description": "Exciting baseball simulation game with realistic gameplay and team management. Compete in thrilling matches and build your dream team.",
+      "imageUrl": "/baseball9.jpg",
+      "downloads": "10M+",
+      "rating": "4.7"
     },
     {
       id: 2,
